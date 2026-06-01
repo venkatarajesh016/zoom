@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import LandingPage from './pages/LandingPage'
-import Authentication from './pages/AuthPage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { AuthProvider } from './context/AuthContext'
+import LandingPage from './pages/LandingPage'
+import Authentication from './pages/AuthPage'
 import VideoMeeting from './pages/videoMeeting'
 import Home from './pages/Home'
 import History from './pages/history'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Router>

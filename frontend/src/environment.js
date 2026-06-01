@@ -1,5 +1,5 @@
 const server = {
-  url: "http://localhost:5000"
+  url: "https://zoombackend-68bm.onrender.com"
 };
 
 export default server;
