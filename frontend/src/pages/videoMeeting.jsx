@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import io from "socket.io-client";
 import { Badge, IconButton, TextField } from '@mui/material';
 import { Button } from '@mui/material';
@@ -16,6 +17,7 @@ import server from '../environment';
 const server_url = server.url;
 
 export default function VideoMeeting() {
+    const navigate = useNavigate();
     var socketRef = useRef();
     let socketIdRef = useRef();
 
@@ -414,7 +416,7 @@ export default function VideoMeeting() {
             let tracks = localVideoref.current.srcObject.getTracks()
             tracks.forEach(track => track.stop())
         } catch (e) { }
-        window.location.href = "/home";
+        navigate("/home");
     }
 
     let openChat = () => {
